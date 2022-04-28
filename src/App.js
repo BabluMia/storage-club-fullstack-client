@@ -1,25 +1,29 @@
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Route, Routes } from 'react-router-dom';
-import Login from './Components/Login/Login';
-import { useEffect, useState } from 'react';
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Route, Routes } from "react-router-dom";
+import Login from "./Components/Login/Login";
+import auth from "./firebase.init";
+import { useSignInWithGoogle } from "react-firebase-hooks/auth";
 
 function App() {
-  const [datas,setDatas] =useState([])
-  useEffect(()=>{
-    fetch('http://localhost:5000/products')
-    .then(res=>res.json())
-    .then(data => setDatas(data))
-  },[])
+  const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+  
+  const handleGoogle = () => {
+    signInWithGoogle()
+  };
+  if(error){
+    console.log(error);
+  }
   return (
     <div>
       {/* <h2>Hello From App</h2>
       <button className='btn btn-primary'>Hello</button> */}
-      {
-        datas.map(sdata => <h3>{sdata.model}</h3>)
-      }
+      
+      <button className="btn btn-primary" onClick={handleGoogle}>
+        Google
+      </button>
       <Routes>
-        <Route path='/login' element={<Login/>}></Route>
+        <Route path="/login" element={<Login />}></Route>
       </Routes>
     </div>
   );
