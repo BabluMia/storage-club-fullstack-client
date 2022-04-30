@@ -1,0 +1,82 @@
+[
+    {
+        "name" :"Headphone",
+        "Model" : "Nokia 23X5",
+        "Price":123,
+        "quantity":50,
+        "status":"In Stock",
+        "suplier":"Nokia Tech",
+        "desc" : "The ANC (Active Noise Cancellation) feature reduces unwanted background noise up to 38db. Press the button to enjoy your music without interruptions.",
+        "img": "http://demo.bestprestashoptheme.com/warehouse/229-home_default/dareu-headphones.jpg"
+    },
+    {
+        "name" :"Gaming Mouse",
+        "Model" : "Logitech X3",
+        "Price":160,
+        "quantity":120,
+        "status":"In Stock",
+        "suplier":"Logitech",
+        "desc" : "Logitech X3 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design. This wireless mouse offers an excellent 10 meters reliable wireless range along with 1000 dpi",
+        "img": "http://demo.bestprestashoptheme.com/warehouse/240-home_default/logitech-gaming.jpg"
+    },
+    {
+        "name" :"Airpod",
+        "Model" : "Airpot pro",
+        "Price":190,
+        "quantity":30,
+        "status":"In Stock",
+        "suplier":"Apple",
+        "desc" : "We refined the details of comfort, creating a new class of in-ear headphones with a customizable fit that forms an exceptional seal for Active Noise Cancellation. You’ll feel your music, not your headphones.",
+        "img": "http://demo.bestprestashoptheme.com/warehouse/219-home_default/apple-airpods-pro.jpg"
+    },
+    {
+        "name" :"Super Drone",
+        "Model" : "Flycan f11s",
+        "Price":523,
+        "quantity":10,
+        "status":"In Stock",
+        "suplier":"MEVI co.",
+        "desc" : "The ANC (Active Noise Cancellation) feature reduces unwanted background noise up to 38db. Press the button to enjoy your music without interruptions.",
+        "img": "http://demo.bestprestashoptheme.com/warehouse/174-home_default/flycam-sjrc-f11s.jpg"
+    },
+    {
+        "name" :"Levovo Laptop",
+        "Model" : "Ideapad 12x3",
+        "Price":870,
+        "quantity":55,
+        "status":"In Stock",
+        "suplier":"Lenovo",
+        "desc" : "Lenovo, Ideapad, ThinkCentre and the Lenovo logo are trademarks of Lenovo. Microsoft, Windows, Windows NT, and the Windows logo are trademarks of Microsoft Corporation.",
+        "img": "http://demo.bestprestashoptheme.com/warehouse/153-home_default/lenovo-ideapad.jpg"
+    },
+    {
+        "name" :"Whirlpool Oven",
+        "Model" : "Baked 22Vy",
+        "Price":323,
+        "quantity":12,
+        "status":"In Stock",
+        "suplier":"Whirlpool",
+        "desc" : "Whirlpool MagicCook Elite 25 L Microwave Oven is available at Best Electronics in Bangladesh. Whirlpool Magic Cook Elite 25  litres Convection .",
+        "img": "http://demo.bestprestashoptheme.com/warehouse/165-home_default/integer-vestibulum-dui.jpg"
+    },
+    {
+        "name" :"IPad",
+        "Model" : "IPad 8th gen",
+        "Price":450,
+        "quantity":50,
+        "status":"In Stock",
+        "suplier":"Apple",
+        "desc" : "The ANC (Active Noise Cancellation) feature reduces unwanted background noise up to 38db. Press the button to enjoy your music without interruptions.",
+        "img": "http://demo.bestprestashoptheme.com/warehouse/207-home_default/lorem-ipsum-dolor.jpg"
+    },
+    {
+        "name" :"Hair Dryer",
+        "Model" : "Supersonic dryer",
+        "Price":280,
+        "quantity":9,
+        "status":"In Stock",
+        "suplier":"Supersonic",
+        "desc" : "The ANC (Active Noise Cancellation) feature reduces unwanted background noise up to 38db. Press the button to enjoy your music without interruptions.",
+        "img": "http://demo.bestprestashoptheme.com/warehouse/180-home_default/mug-today-is-a-good-day.jpg"
+    }
+]

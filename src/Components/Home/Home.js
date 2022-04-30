@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Home = () => {
+    const [products, setProducts] = useState([])
+    useEffect(()=>{
+        fetch('http://localhost:5000/products')
+        .then(res =>res.json())
+        .then(data=>setProducts(data))
+    },[])
   return (
     <div>
       {/* banner section */}
@@ -11,6 +17,13 @@ const Home = () => {
               </div>
           </div>
       </div>
+    {/* item test */}
+    <div>
+        <h2>Length:{products.length}</h2>
+        {
+            products.map(product => <p>{product?.name}</p>)
+        }
+    </div>
     </div>
   );
 };
