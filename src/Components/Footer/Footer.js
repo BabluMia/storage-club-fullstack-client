@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="row w-75 mx-auto mb-2">
         <div className="col-12 col-md-6">
         <img src="https://i.ibb.co/QYvfpNM/attachment-104180274-removebgww-preview.png" style={{width:'120px'}} alt="" />
-          <p style={{color:'#F8CB2E'}}>Desgin By Bablu || React & nodejs </p>
+          <p >Desgin By Bablu || React & nodejs </p>
         </div>
         <div className="col-12 col-md-6 ">
           <h5 style={{color:'#F8CB2E'}}>Go To Storage Club ......</h5>

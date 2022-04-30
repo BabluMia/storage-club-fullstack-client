@@ -1,6 +1,6 @@
 import "./Contact.css";
 import React from "react";
-import { toast } from "react-toastify";
+import {  toast } from 'react-toastify';
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 
@@ -12,6 +12,7 @@ const Contact = () => {
   return (
     <div>
       <div className="min-h my-5">
+      
         <span className="text-white my-5">.</span>
         <h2 className="text-4xl text-center mt-5 pt-4 fw-bold  p-4">
           Contact To Storage Club .
@@ -58,6 +59,7 @@ const Contact = () => {
           >
             Send Us
           </button>
+         
         </div>
       </div>
     </div>

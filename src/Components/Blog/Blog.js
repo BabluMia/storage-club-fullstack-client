@@ -12,7 +12,7 @@ const Blog = () => {
           <Accordion>
             <Accordion.Item eventKey="0">
               <Accordion.Header>
-                Authentication vs. Authorization
+              Difference between javascript and nodejs
               </Accordion.Header>
               <Accordion.Body>
                 <div className="row">
@@ -40,7 +40,7 @@ const Blog = () => {
             </Accordion.Item>
             <Accordion.Item eventKey="1">
               <Accordion.Header>
-                Why I'm use Firebase?What other options do you have to implement
+              Differences between sql and nosql databases.
                 authentication?
               </Accordion.Header>
               <Accordion.Body>
@@ -63,7 +63,7 @@ const Blog = () => {
             </Accordion.Item>
             <Accordion.Item eventKey="2">
               <Accordion.Header>
-              What other services does firebase provide other than authentication?
+              What is the purpose of jwt and how does it work?
               </Accordion.Header>
               <Accordion.Body>
               <p className="my-2">
