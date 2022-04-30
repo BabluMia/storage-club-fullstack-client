@@ -6,7 +6,7 @@ const ExtraSectionOne = () => {
             <div className="container-fluid pt-2 pb-5" style={{backgroundColor:'#ecf0f1'}}>
           <h2 className="text-center my-4 py-4">OUR LUCKY PRODUCTS</h2>
           {/* row 1 */}
-          <div className="row">
+          <div className="row mx-auto container">
               <div className="col-12">
                   <div className="row">
                       <div className="col-12 col-lg-6">

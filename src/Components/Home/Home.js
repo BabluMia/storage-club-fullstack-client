@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ExtraSectionOne from "../ExtraSectionOne/ExtraSectionOne";
 import ExtraSectionTwo from "../ExtraSectionTwo/ExtraSectionTwo";
+import Inventory from "../Inventory/Inventory";
 import "./Home.css";
 
 const Home = () => {
@@ -26,16 +27,19 @@ const Home = () => {
       </div>
 
       {/* item test */}
-      <div>
+      <div className="my-4 pb-4">
         <h2 className="text-center my-5">Inventory </h2>
-        {products.map((product) => (
-          <p>{product?.name}</p>
-        ))}
+        
+          <div className="container row justify-content-evenly gap-5 mx-auto ">
+            {products.slice(0, 6).map((product) => (
+              <Inventory key={product._id} product={product}></Inventory>
+            ))}
+          </div>
       </div>
       {/* extra section 1 */}
-      <ExtraSectionOne/>
+      <ExtraSectionOne />
       {/* extra section 2 */}
-      <ExtraSectionTwo/>
+      <ExtraSectionTwo />
     </div>
   );
 };
