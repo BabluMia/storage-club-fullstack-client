@@ -1,0 +1,12 @@
+.footer{
+    
+    overflow-x: hidden;
+    max-width: 100vw;
+    margin: 0 auto;
+}
+.custom-icon{
+    font-size: 1.2rem;
+    padding: 8px 12px;
+    /* color: radial-gradient(rgb(139, 78, 78),#ffd6d6) !important; */
+    color:#e3ce81;
+}

@@ -2,29 +2,30 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Route, Routes } from "react-router-dom";
 import Login from "./Components/Login/Login";
-import auth from "./firebase.init";
-import { useSignInWithGoogle } from "react-firebase-hooks/auth";
+import Header from "./Components/Header/Header";
+import Footer from "./Components/Footer/Footer";
+import Blog from "./Components/Blog/Blog";
+import NotFound from "./Components/Notfound/NotFound";
+import Contact from "./Components/Contact/Contact";
+import Home from "./Components/Home/Home";
+
+
+
 
 function App() {
-  const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
   
-  const handleGoogle = () => {
-    signInWithGoogle()
-  };
-  if(error){
-    console.log(error);
-  }
   return (
     <div>
-      {/* <h2>Hello From App</h2>
-      <button className='btn btn-primary'>Hello</button> */}
-      
-      <button className="btn btn-primary" onClick={handleGoogle}>
-        Google
-      </button>
+      <Header/>
       <Routes>
+        <Route path="/" element={<Home/>}></Route>
+        <Route path="/home" element={<Home/>}></Route>
+        <Route path="/blog" element={<Blog/>}></Route>
         <Route path="/login" element={<Login />}></Route>
+        <Route path="/contact" element={<Contact/>}></Route>
+        <Route path="*" element={<NotFound/>}></Route>
       </Routes>
+      <Footer/>
     </div>
   );
 }
