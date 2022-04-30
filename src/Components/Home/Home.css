@@ -1,0 +1,19 @@
+.bottom , .top{
+    position: relative;
+}
+.bottom span{
+    position: absolute;
+    bottom: 10px;
+    right: 45%;
+    font-family: 'Merriweather', serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.top span {
+    position: absolute;
+    font-family: 'Merriweather', serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    top: 20px;
+    right: 45%;
+}
