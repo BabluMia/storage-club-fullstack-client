@@ -54,10 +54,10 @@ const Inventory = () => {
       <h1 className="text-center my-3">{singlePd?.name}</h1>
       <div className="container my-5">
         <div className="row justify-content-around">
-          <div className="col-4">
+          <div className="col-12 col-lg-4">
             <img src={singlePd?.img} alt="" />
           </div>
-          <div className="col-7 my-3">
+          <div className="col-12 col-lg-7 my-3">
             <h6>Product Id : {singlePd?._id}</h6>
             <h5>Product Name : {singlePd?.name}</h5>
             <h5>Product Model : {singlePd?.Model}</h5>
