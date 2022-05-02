@@ -1,0 +1,8 @@
+.mini-text{
+    display: block;
+}
+@media only screen and (max-width: 420px) {
+    .mini-text{
+        display: none;
+    }
+  }

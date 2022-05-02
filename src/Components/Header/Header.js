@@ -19,7 +19,7 @@ const Header = () => {
     >
       <Container>
         <Navbar.Brand as={Link} to="/" className="text-white fs-2 fw-bold">
-          <img src="https://i.ibb.co/QYvfpNM/attachment-104180274-removebgww-preview.png" style={{width:'120px'}} alt="" />
+          <img src="https://i.ibb.co/QYvfpNM/attachment-104180274-removebgww-preview.png" style={{width:'140px'}} alt="" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse
@@ -33,6 +33,15 @@ const Header = () => {
 
             <Nav.Link as={Link} to="/blog" >
               Blog
+            </Nav.Link>
+            <Nav.Link as={Link} to="/manage-inventory" >
+              Manage Inventory
+            </Nav.Link>
+            <Nav.Link as={Link} to="/add-item" >
+              Add Item
+            </Nav.Link>
+            <Nav.Link as={Link} to="/my-item" >
+              My Item
             </Nav.Link>
             <Nav.Link as={Link} to="/contact" >
               Contact

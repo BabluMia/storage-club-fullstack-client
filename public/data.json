@@ -3,11 +3,11 @@
         "name" :"Headphone",
         "Model" : "Nokia 23X5",
         "Price":123,
-        "quantity":50,
+        "quantity":530,
         "status":"In Stock",
         "suplier":"Nokia Tech",
         "desc" : "The ANC (Active Noise Cancellation) feature reduces unwanted background noise up to 38db. Press the button to enjoy your music without interruptions.",
-        "img": "http://demo.bestprestashoptheme.com/warehouse/229-home_default/dareu-headphones.jpg"
+        "img": "https://i.ibb.co/ccq9ZZJ/dareu-headphones.jpg"
     },
     {
         "name" :"Gaming Mouse",
@@ -17,17 +17,17 @@
         "status":"In Stock",
         "suplier":"Logitech",
         "desc" : "Logitech X3 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design. This wireless mouse offers an excellent 10 meters reliable wireless range along with 1000 dpi",
-        "img": "http://demo.bestprestashoptheme.com/warehouse/240-home_default/logitech-gaming.jpg"
+        "img": "https://i.ibb.co/H23kXMW/logitech-gaming.jpg"
     },
     {
         "name" :"Airpod",
         "Model" : "Airpot pro",
         "Price":190,
-        "quantity":30,
+        "quantity":530,
         "status":"In Stock",
         "suplier":"Apple",
         "desc" : "We refined the details of comfort, creating a new class of in-ear headphones with a customizable fit that forms an exceptional seal for Active Noise Cancellation. You’ll feel your music, not your headphones.",
-        "img": "http://demo.bestprestashoptheme.com/warehouse/219-home_default/apple-airpods-pro.jpg"
+        "img": "https://i.ibb.co/dtBtPVP/apple-airpods-pro.jpg"
     },
     {
         "name" :"Super Drone",
@@ -37,7 +37,7 @@
         "status":"In Stock",
         "suplier":"MEVI co.",
         "desc" : "The ANC (Active Noise Cancellation) feature reduces unwanted background noise up to 38db. Press the button to enjoy your music without interruptions.",
-        "img": "http://demo.bestprestashoptheme.com/warehouse/174-home_default/flycam-sjrc-f11s.jpg"
+        "img": "https://i.ibb.co/qFgs8cD/flycam-sjrc-f11s.jpg"
     },
     {
         "name" :"Levovo Laptop",
@@ -47,7 +47,7 @@
         "status":"In Stock",
         "suplier":"Lenovo",
         "desc" : "Lenovo, Ideapad, ThinkCentre and the Lenovo logo are trademarks of Lenovo. Microsoft, Windows, Windows NT, and the Windows logo are trademarks of Microsoft Corporation.",
-        "img": "http://demo.bestprestashoptheme.com/warehouse/153-home_default/lenovo-ideapad.jpg"
+        "img": "https://i.ibb.co/8Ywzyhf/lenovo-ideapad.jpg"
     },
     {
         "name" :"Whirlpool Oven",
@@ -57,7 +57,7 @@
         "status":"In Stock",
         "suplier":"Whirlpool",
         "desc" : "Whirlpool MagicCook Elite 25 L Microwave Oven is available at Best Electronics in Bangladesh. Whirlpool Magic Cook Elite 25  litres Convection .",
-        "img": "http://demo.bestprestashoptheme.com/warehouse/165-home_default/integer-vestibulum-dui.jpg"
+        "img": "https://i.ibb.co/nCCFtC0/integer-vestibulum-dui.jpg"
     },
     {
         "name" :"IPad",
@@ -67,16 +67,16 @@
         "status":"In Stock",
         "suplier":"Apple",
         "desc" : "The ANC (Active Noise Cancellation) feature reduces unwanted background noise up to 38db. Press the button to enjoy your music without interruptions.",
-        "img": "http://demo.bestprestashoptheme.com/warehouse/207-home_default/lorem-ipsum-dolor.jpg"
+        "img": "https://i.ibb.co/JRQmWwB/lorem-ipsum-dolor.jpg"
     },
     {
         "name" :"Hair Dryer",
         "Model" : "Supersonic dryer",
         "Price":280,
-        "quantity":9,
+        "quantity":239,
         "status":"In Stock",
         "suplier":"Supersonic",
         "desc" : "The ANC (Active Noise Cancellation) feature reduces unwanted background noise up to 38db. Press the button to enjoy your music without interruptions.",
-        "img": "http://demo.bestprestashoptheme.com/warehouse/180-home_default/mug-today-is-a-good-day.jpg"
+        "img": "https://i.ibb.co/BfPbSFt/mug-today-is-a-good-day.jpg"
     }
 ]

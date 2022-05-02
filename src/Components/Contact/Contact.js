@@ -44,7 +44,7 @@ const Contact = () => {
           </div>
           <div className="mb-3 mt-3">
             <label htmlFor="exampleFormControlTextarea1" className="form-label">
-              Your Response
+              User Response
             </label>
             <textarea
               className="form-control"

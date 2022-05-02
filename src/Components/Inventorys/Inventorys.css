@@ -1,0 +1,14 @@
+.pd-btn{
+    color: black;
+    font-size: 1.2rem;
+    margin: 8px 0px;
+    background: #fff;
+    padding: 8px 12px !important;
+    border-radius: 5px;
+    font-family: 'Radio Canada', sans-serif;
+}
+.pd-btn:hover{
+    background: rgb(46, 91, 69);
+    transition: .5s all ease;
+    border: 1px solid rgb(46, 91, 69) !important;
+}

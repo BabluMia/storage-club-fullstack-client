@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import ExtraSectionOne from "../ExtraSectionOne/ExtraSectionOne";
 import ExtraSectionTwo from "../ExtraSectionTwo/ExtraSectionTwo";
-import Inventory from "../Inventory/Inventory";
+import Inventorys from "../Inventorys/Inventorys";
+import banner from '../Image/baner.png'
 import "./Home.css";
+import { Link } from "react-router-dom";
+import { Button } from "react-bootstrap";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -18,9 +21,8 @@ const Home = () => {
         <div className="row">
           <div className="col-12">
             <img
-              src="http://demo.bestprestashoptheme.com/warehouse/modules/novnivoslider/images/7bf86086d5e35510fee4701490f352902deeb865_Untitled-1.png"
-              className="img-fluid"
-              alt=""
+              src={banner}
+              alt="" className="img-fluid"
             />
           </div>
         </div>
@@ -32,8 +34,13 @@ const Home = () => {
         
           <div className="container row justify-content-evenly gap-5 mx-auto ">
             {products.slice(0, 6).map((product) => (
-              <Inventory key={product._id} product={product}></Inventory>
+              <Inventorys key={product._id} product={product}></Inventorys>
             ))}
+          </div>
+          <div className='my-4  text-center'>
+          <Link to={'/manage-inventory'} >
+           <Button>All Inventory</Button>
+          </Link>
           </div>
       </div>
       {/* extra section 1 */}
