@@ -14,7 +14,7 @@ const Footer = () => {
           <p >Desgin By Bablu || React & nodejs </p>
         </div>
         <div className="col-12 col-md-6 ">
-          <h5 style={{color:'#F8CB2E'}}>Go To Storage Club ......</h5>
+          <h5 style={{color:'#242B2E'}}>Go To Storage Club ......</h5>
           <a className="custom-icon"  href={'https://github.com/BabluMia'}>
             <GrFacebookOption />
           </a>

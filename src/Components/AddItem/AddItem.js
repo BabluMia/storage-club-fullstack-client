@@ -1,35 +1,45 @@
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { toast } from "react-toastify";
 import auth from "../../firebase.init";
 
 const AddItem = () => {
   const [user] = useAuthState(auth);
-  const handleAddItem =(event)=>{
-      event.preventDefault()
-      const userName = user.displayName;
-      const userEmail = user.email;
-      const name = event.target.pdName.value;
-      const Model = event.target.pdModel.value;
-      const quantity = event.target.pdQuantity.value;
-      const Price = event.target.pdPrice.value;
-      const desc = event.target.pdDesc.value;
-      const img = event.target.pdDesc.value;
-      const addedByUser = {
-          userName,userEmail,name,Model,quantity,Price,desc,img
+
+  const handleAddItem = (event) => {
+    event.preventDefault();
+    const addedByUser = {
+      userName:user.displayName,
+      userEmail:user.email,
+      name:event.target.pdName.value,
+      Model:event.target.pdModel.value,
+      quantity:event.target.pdQuantity.value,
+      Price:event.target.pdPrice.value,
+      desc:event.target.pdDesc.value,
+      img:event.target.pdUrl.value,
+    };
+    console.log(addedByUser)
+    fetch("https://tranquil-castle-58262.herokuapp.com/products", {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify(addedByUser),
+  })
+    .then((res) => res.json())
+    .then((result) => {
+      if (result.insertedId) {
+        toast("Item added");
       }
-      const defaultData = {
-        name,Model,quantity,Price,desc,img
-      }
-      console.log("addbyuser",addedByUser);
-      console.log("deafoult",defaultData);
-    //   event.Reset()
-  }
+    });
+    event.target.reset()
+  };
+
+
   return (
-    <div style={{ maxWidth: "100vw",overflowX:'hidden' }}>
+    <div style={{ maxWidth: "100vw", overflowX: "hidden" }}>
       <h2 className="my-4 text-center">Add A New Item</h2>
       <div className="row ">
         <div className="col-lg-6 mx-auto">
-          <form action="" onSubmit={handleAddItem}>
+          <form onSubmit={handleAddItem}>
             {/* name */}
             <input
               type="Text"
@@ -63,7 +73,7 @@ const AddItem = () => {
             ></input>
 
             <input
-              type="Text"
+              type="number"
               className="form-control"
               placeholder="Product Quantity"
               required
@@ -71,7 +81,7 @@ const AddItem = () => {
             ></input>
 
             <input
-              type="Text"
+              type="number"
               className="form-control"
               placeholder="Product Price"
               required
@@ -91,7 +101,12 @@ const AddItem = () => {
               required
               name="pdUrl"
             ></input>
-            <input type="submit" className="btn btn-danger" value="Add Item" />
+            <input
+              
+              type="submit"
+              className="btn btn-danger"
+              value="Add Item"
+            />
           </form>
         </div>
       </div>
