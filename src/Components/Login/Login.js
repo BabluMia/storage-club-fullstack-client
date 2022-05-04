@@ -12,12 +12,13 @@ import { toast } from "react-toastify";
 import Loading from "../Loading/Loading";
 import { Button } from "react-bootstrap";
 import { FcGoogle } from "react-icons/fc";
+import axios from "axios";
 
 const Login = () => {
   const [user] = useAuthState(auth);
   const [signInWithEmailAndPassword, user1, loading, error] =
     useSignInWithEmailAndPassword(auth);
-    const [signInWithGoogle, user2, loading1, error1] = useSignInWithGoogle(auth);
+  const [signInWithGoogle, user2, loading1, error1] = useSignInWithGoogle(auth);
 
   const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
   const emailRef = useRef("");
@@ -36,27 +37,30 @@ const Login = () => {
     signInWithGoogle();
   };
   // form submit
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
-    signInWithEmailAndPassword(email, password);
-    
+    await signInWithEmailAndPassword(email, password);
+    const { data } = await axios.post("http://localhost:5000/login", { email });
+    localStorage.setItem("accessToken", data.accessToken);
+    navigate(from, { replace: true });
   };
-// error
+  // error
   if (error || error1) {
     errorElement = (
       <div>
-        <p className="my-2">Error: {error?.message} {error1?.message}</p>
+        <p className="my-2">
+          Error: {error?.message} {error1?.message}
+        </p>
       </div>
     );
   }
-// reset pasword
+  // reset pasword
   const resetPassword = async () => {
     const email = emailRef.current.value;
     await sendPasswordResetEmail(email);
     toast("Sent reset email");
-    
   };
 
   if (user) {
@@ -72,7 +76,14 @@ const Login = () => {
 
             {/* <SocialLogin /> */}
             <div>
-              <FcGoogle onClick={handleGoogle} style={{fontSize:"30px" , margin:"10px 0px",cursor:'pointer'}}></FcGoogle>
+              <FcGoogle
+                onClick={handleGoogle}
+                style={{
+                  fontSize: "30px",
+                  margin: "10px 0px",
+                  cursor: "pointer",
+                }}
+              ></FcGoogle>
             </div>
             <span>or use your account</span>
             <input required ref={emailRef} type="email" placeholder="Email" />
@@ -81,24 +92,36 @@ const Login = () => {
               ref={passwordRef}
               type="password"
               placeholder="Password"
-            /> 
-            
-               <p>
+            />
+
+            <p>
               Forget Password ?{" "}
               <Link
                 className="text-primary text-decoration-none pe-auto"
                 to="/login"
-                
-              > <Button className="bg-white text-dark border-0 px-2" onClick={resetPassword} >
-                Reset
-              </Button>
-                
+              >
+                {" "}
+                <Button
+                  className="bg-white text-dark border-0 px-2"
+                  onClick={resetPassword}
+                >
+                  Reset
+                </Button>
               </Link>
-            </p> 
-            
-            
+            </p>
+
             {errorElement}
-            <button type="submit" style={{backgroundColor:'skyblue' , color:'black',border:'0',margin:'6px 0px'}} >Log In</button>
+            <button
+              type="submit"
+              style={{
+                backgroundColor: "skyblue",
+                color: "black",
+                border: "0",
+                margin: "6px 0px",
+              }}
+            >
+              Log In
+            </button>
             <p>
               New Here{" "}
               <span className="fw-bold">

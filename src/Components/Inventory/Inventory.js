@@ -1,62 +1,92 @@
+// import { async } from "@firebase/util";
+import { async } from "@firebase/util";
+import axios from "axios";
 import React, { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Inventory = () => {
   const { id } = useParams();
   const [singlePd, setSinglePd] = useState({});
   const [isReload, setIsReload] = useState(false);
-  console.log(singlePd);
+  // console.log(singlePd);
 
   const url = `http://localhost:5000/inventory/${id}`;
   // const url = `https://tranquil-castle-58262.herokuapp.com/inventory/${id}`;
-
+  // console.log(url);
+  let { quantity, name, img, Price, Model, desc, status } = singlePd;
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => setSinglePd(data));
-  }, []);
-  let { quantity, name, img, Price, Model, desc, status } = singlePd;
+  }, [url]);
+  // console.log(singlePd)
 
-  const handleDelevired = (event) => {
-    console.log(quantity);
-    event.preventDefault();
-    quantity = parseInt(quantity - 1);
-    console.log(quantity);
+  // const handleDelevired = (event) => {
+  //   // console.log(quantity);
+  //   event.preventDefault();
+  //   // quantity = parseInt(quantity - 1);
+  //   console.log(quantity);
 
-    // const updateQuantity = { quantity, name, img, Price, Model, desc, status };
-    // console.log(updateQuantity);
-    fetch(url, {
-      method: "POST",
-      body: quantity,
-      headers: {
-        "Content-type": "application/json; ",
-      },
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-      });
+  //   // const updateQuantity = { quantity, name, img, Price, Model, desc, status };
+  //   // console.log(updateQuantity);
+  //   fetch(url, {
+  //     method: "POST",
+  //     body: { abc: "abc" },
+  //     headers: {
+  //       "Content-type": "application/json; ",
+  //     },
+  //   })
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       console.log(data);
+  //     });
+  // };
+  const handleDelevired = async (e) => {
+    // console.log("hi");
+    quantity = quantity - 1;
+    let data = await axios.put(url, { quantity: quantity }).then((res) => {
+      if (res.request.status === 200) {
+        toast("done");
+      }
+    });
+    // console.log(data);
   };
   const updateRef = useRef("");
 
-  const handleStock = (event) => {
-    event.preventDefault();
-    const stock = parseInt(updateRef.current.value);
-
-    const newQuantity = singlePd.quantity + stock;
-    console.log(newQuantity);
-    fetch(url, {
-      method: "PUT",
-      body: JSON.stringify({ newQuantity }),
-      headers: {
-        "Content-type": "application/json; ",
-      },
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        setIsReload(!isReload);
+  const handleStock = async (event) => {
+    // console.log(updateRef.current.value);
+    quantity = parseInt(quantity) + parseInt(updateRef.current.value);
+    console.log(quantity);
+    if (quantity < 0) {
+      toast("not valid");
+      return;
+    } else {
+      let data = await axios.put(url, { quantity: quantity }).then((res) => {
+        if (res.request.status === 200) {
+          toast("done");
+        }
       });
+    }
+    // event.preventDefault();
+    // const stock = parseInt(updateRef.current.value);
+
+    // const newQuantity = singlePd.quantity + stock;
+    // console.log(newQuantity);
+    // fetch(url, {
+    //   method: "PUT",
+    //   // body: JSON.stringify({ newQuantity }),
+    //   body: newQuantity,
+    //   headers: {
+    //     "Content-type": "application/json; ",
+    //   },
+    // })
+    //   .then((response) => response.json())
+    //   .then((data) => {
+    //     console.log(data);
+    //     setIsReload(!isReload);
+    //   });
+    console.log(event.target.value);
   };
 
   return (

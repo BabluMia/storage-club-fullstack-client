@@ -7,20 +7,11 @@ const MyItem = () => {
   const [userItem, setUserItem] = useState([]);
   // `https://tranquil-castle-58262.herokuapp.com/products?email=${user?.email}`
   useEffect(() => {
-    const email = user?.email;
     fetch(`https://tranquil-castle-58262.herokuapp.com/products`)
       .then((res) => res.json())
       .then((data) => setUserItem(data));
   }, []);
-
-  //  console.log(userItem[1]);
-  let item = userItem.filter(function (sitem) {
-    return sitem?.userEmail === user?.email;
-  });
-
-  console.log(item);
-  //    const item = userItem?.filter(userItem[1]?.include[user.email])
-
+  let item = userItem.filter( sitem => sitem?.userEmail === user?.email);
   const handleDelete = (event) => {};
 
   return (
@@ -30,7 +21,7 @@ const MyItem = () => {
         <div className="col-12 col-lg-6 mx-auto">
           {item?.map((uItem) => (
             <div
-              className="row my-4 py-2 rounded shadow"
+              className="row my-4 mx-2 py-2 rounded shadow"
               style={{ border: "1px solid gray", cursor: "pointer" }}
             >
               <div className="col-3">

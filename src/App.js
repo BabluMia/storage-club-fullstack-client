@@ -28,15 +28,31 @@ function App() {
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
-        <Route path="/inventory/:id" element={<Inventory />}></Route>
+        <Route
+          path="/inventory/:id"
+          element={
+            <RequireAuth>
+              <Inventory />
+            </RequireAuth>
+          }
+        ></Route>
         <Route path="/manage-inventory" element={<ManageInventory />}></Route>
-        <Route path="/add-item" element={<AddItem />}></Route>
-        <Route path="/my-item" element={
-          <RequireAuth>
-            <MyItem />
-          </RequireAuth>
-        }>
-        </Route>
+        <Route
+          path="/add-item"
+          element={
+            <RequireAuth>
+              <AddItem />
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/my-item"
+          element={
+            <RequireAuth>
+              <MyItem />
+            </RequireAuth>
+          }
+        ></Route>
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
       <Footer />
