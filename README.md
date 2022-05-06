@@ -1,72 +1,38 @@
 # Storage Club || Fullstack
 
-Netlify Live Link [Check ..](https://e-ware-house-production.netlify.app/).
-Clint Side Repo [See Github](https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-BabluMia).
-Server Side Repo [See Github](https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-BabluMia).
+## Netlify Live Link [Check ..](https://e-ware-house-production.netlify.app/).
 
-## Available Scripts
 
-In the project directory, you can run:
+## Clint Side Repo [See Github](https://github.com/ProgrammingHeroWC4/
+warehouse-management-client-side-BabluMia).
+
+
+## Server Side Repo [See Github](https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-BabluMia).
+
+
+
 
 ### `Project Detail`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* This website build for a Ware house management company called Storage Club
+* You can see lots of products in warehouse .
+* It is a electronics ware house .
+* In home page you can see header , banner , 6 item , 2 extra section and a footer .
+* If you click in update button this page will navigate in product detail page .
+* in product detail page you can see all about product .
+* In detail page you can update product stock and deliver product .
+* There also add item pase if there is an user he/she can add/update/delete product 
+* In all product page you can see all product 
+* You can login with google and email .
+* User can't see hes/her item without jwt token.
 
 ### `Used Technology`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* First of all i use react as a framework .
+* As css framework i use react bootstrap .
+* For notifaction i use react toastify .
+* For authenticaton use firbase and react firebase hook
+* For icon used react-icon
+* Also used axios .
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
