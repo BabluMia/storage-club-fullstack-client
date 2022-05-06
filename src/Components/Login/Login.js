@@ -42,7 +42,10 @@ const Login = () => {
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
     await signInWithEmailAndPassword(email, password);
-    const { data } = await axios.post("http://localhost:5000/login", { email });
+    const { data } = await axios.post(
+      " https://tranquil-castle-58262.herokuapp.com/login",
+      { email }
+    );
     localStorage.setItem("accessToken", data.accessToken);
     navigate(from, { replace: true });
   };
@@ -68,7 +71,7 @@ const Login = () => {
   }
 
   return (
-    <div className="form-body">
+    <div className="form-body mt-5 m-lg-1">
       <div className="container-main-form " id="container">
         <div className="form-container log-in-container">
           <form onSubmit={handleSubmit}>

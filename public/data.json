@@ -10,6 +10,7 @@
         "img": "https://i.ibb.co/ccq9ZZJ/dareu-headphones.jpg"
     },
     {
+       
         "name" :"Gaming Mouse",
         "Model" : "Logitech X3",
         "Price":160,
@@ -21,7 +22,7 @@
     },
     {
         "name" :"Airpod",
-        "Model" : "Airpot pro",
+        "Model" : "Airpod pro",
         "Price":190,
         "quantity":530,
         "status":"In Stock",

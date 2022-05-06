@@ -1,27 +1,21 @@
 import axios from "axios";
+import { Link } from "react-router-dom";
 // import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 
 const AllInventory = ({ sProduct }) => {
-  const url = `http://localhost:5000/inventory/${sProduct._id}`;
+  const url = ` https://tranquil-castle-58262.herokuapp.com/inventory/${sProduct._id}`;
   const handleDelete = async () => {
     let confrim = window.confirm("yes or not");
-    // console.log(confrim);
     if (confrim) {
       let data = await axios.delete(url).then((res) => {
         if (res.request.status === 200) {
           toast("deleted");
         }
       });
-      console.log(data);
-      //   setDeleted(true);
     } else {
-      //   setDeleted(false);
       return;
     }
-    // useEffect(() => {}, []);
-    // let data = await axios.delete(url);
-    // console.log(data);
   };
 
   return (
@@ -37,15 +31,18 @@ const AllInventory = ({ sProduct }) => {
           alt=""
         />
       </div>
-      <div className="col-6 text-center">
+      <div className="col-5 text-center">
         <h5>Name : {sProduct?.name}</h5>
         <h5>Model : {sProduct?.Model}</h5>
         <h5>Price : ${sProduct?.Price}</h5>
       </div>
-      <div className="col-3 text-center d-flex align-items-center">
-        <button className="btn btn-danger " onClick={handleDelete}>
+      <div className="col-4 text-center d-flex align-items-center">
+        <button className="btn btn-danger me-1" onClick={handleDelete}>
           Delete{" "}
         </button>
+        <Link to={`/inventory/${sProduct._id}`}>
+          <button className="btn btn-danger ">Update </button>
+        </Link>
       </div>
     </div>
   );

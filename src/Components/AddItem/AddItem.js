@@ -7,32 +7,44 @@ const AddItem = () => {
   const [user] = useAuthState(auth);
 
   const handleAddItem = (event) => {
+    const url1 = " https://tranquil-castle-58262.herokuapp.com/products";
+    const url2 = " https://tranquil-castle-58262.herokuapp.com/userItem";
     event.preventDefault();
     const addedByUser = {
-      userName:user.displayName,
-      userEmail:user.email,
-      name:event.target.pdName.value,
-      Model:event.target.pdModel.value,
-      quantity:event.target.pdQuantity.value,
-      Price:event.target.pdPrice.value,
-      desc:event.target.pdDesc.value,
-      img:event.target.pdUrl.value,
+      Userame: user.displayName,
+      email: user.email,
+      name: event.target.pdName.value,
+      Model: event.target.pdModel.value,
+      quantity: event.target.pdQuantity.value,
+      Price: event.target.pdPrice.value,
+      desc: event.target.pdDesc.value,
+      img: event.target.pdUrl.value,
     };
-    console.log(addedByUser)
-    fetch("https://tranquil-castle-58262.herokuapp.com/products", {
-    method: "POST",
-    headers: { "content-type": "application/json" },
-    body: JSON.stringify(addedByUser),
-  })
-    .then((res) => res.json())
-    .then((result) => {
-      if (result.insertedId) {
-        toast("Item added");
-      }
-    });
-    event.target.reset()
+    fetch(url1, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(addedByUser),
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        if (result.insertedId) {
+          toast("Item added");
+        }
+      });
+    event.target.reset();
+    // fetch(url2 , {
+    //   method: "POST",
+    //   headers: { "content-type": "application/json" },
+    //   body: JSON.stringify(addedByUser),
+    // })
+    //   .then((res) => res.json())
+    //   .then((result) => {
+    //     if (result.insertedId) {
+    //       console.log("Item added");
+    //     }
+    //   });
+    // event.target.reset();
   };
-
 
   return (
     <div style={{ maxWidth: "100vw", overflowX: "hidden" }}>
@@ -101,12 +113,7 @@ const AddItem = () => {
               required
               name="pdUrl"
             ></input>
-            <input
-              
-              type="submit"
-              className="btn btn-danger"
-              value="Add Item"
-            />
+            <input type="submit" className="btn btn-danger" value="Add Item" />
           </form>
         </div>
       </div>

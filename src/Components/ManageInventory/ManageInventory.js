@@ -5,7 +5,7 @@ const ManageInventory = () => {
   const [products, setProducts] = useState([]);
   // const [deleted, setDeleted] = useState(null);
   useEffect(() => {
-    fetch("https://tranquil-castle-58262.herokuapp.com/products")
+    fetch(" https://tranquil-castle-58262.herokuapp.com/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, [products]);
