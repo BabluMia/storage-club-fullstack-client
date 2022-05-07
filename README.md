@@ -2,12 +2,17 @@
 
 ## Netlify Live Link [Check ..](https://e-ware-house-production.netlify.app/).
 
+## Firebase Live Link [See Github](https://storage-club.web.app/my-item).
+
 
 ## Clint Side Repo [See Github](https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-BabluMia).
 
 
 
 ## Server Side Repo [See Github](https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-BabluMia).
+
+
+
 
 
 
