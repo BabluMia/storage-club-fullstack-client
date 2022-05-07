@@ -34,7 +34,6 @@ const Inventory = () => {
   const updateRef = useRef("");
 
   const handleStock = async (event) => {
-    // console.log(updateRef.current.value);
     quantity = parseInt(quantity) + parseInt(updateRef.current.value);
     console.log(quantity);
     if (quantity === 0 && quantity < 0) {
@@ -47,7 +46,7 @@ const Inventory = () => {
       });
     }
     else{
-      alert('fill')
+      toast('Please input a quantity!!')
     }
   };
 
