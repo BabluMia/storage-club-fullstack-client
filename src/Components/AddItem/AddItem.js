@@ -1,5 +1,7 @@
 import React from "react";
+import { Button } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import auth from "../../firebase.init";
 
@@ -18,6 +20,7 @@ const AddItem = () => {
       quantity: event.target.pdQuantity.value,
       Price: event.target.pdPrice.value,
       desc: event.target.pdDesc.value,
+      suplier: event.target.suplier.value,
       img: event.target.pdUrl.value,
     };
     fetch(url1, {
@@ -99,12 +102,19 @@ const AddItem = () => {
               required
               name="pdPrice"
             ></input>
-            <input
+            <textarea
               type="Text"
               className="form-control"
               placeholder="Product Description"
               required
               name="pdDesc"
+            ></textarea>
+            <input
+              type="Text"
+              className="form-control"
+              placeholder="Supplier"
+              required
+              name="suplier"
             ></input>
             <input
               type="Text"
@@ -114,6 +124,12 @@ const AddItem = () => {
               name="pdUrl"
             ></input>
             <input type="submit" className="btn btn-danger" value="Add Item" />
+             <Link to={'/my-item'}>
+             <input type="btn" className="btn btn-danger" value=" See Your Item" />
+            </Link> 
+            <Link to={'/manage-inventory'}>
+            <input type="btn" className="btn btn-danger" value="Manage Inventory" />
+            </Link> 
           </form>
         </div>
       </div>

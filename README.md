@@ -3,8 +3,8 @@
 ## Netlify Live Link [Check ..](https://e-ware-house-production.netlify.app/).
 
 
-## Clint Side Repo [See Github](https://github.com/ProgrammingHeroWC4/
-warehouse-management-client-side-BabluMia).
+## Clint Side Repo [See Github](https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-BabluMia).
+
 
 
 ## Server Side Repo [See Github](https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-BabluMia).

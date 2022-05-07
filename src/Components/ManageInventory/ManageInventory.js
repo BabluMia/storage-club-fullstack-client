@@ -12,7 +12,7 @@ const ManageInventory = () => {
   // console.log(deleted);
   // useEffect(() => {}, [products]);
   return (
-    <div>
+    <div style={{ minHeight:'100vh'}}>
       <h2 className="text-center my-4 ">All Product</h2>
       <div className="container row mx-auto">
         {

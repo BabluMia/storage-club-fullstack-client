@@ -14,7 +14,7 @@ const Inventory = () => {
   // const url = ` https://tranquil-castle-58262.herokuapp.com/inventory/${id}`;
   const url = ` https://tranquil-castle-58262.herokuapp.com/inventory/${id}`;
   // console.log(url);
-  let { quantity, name, img, Price, Model, desc, status } = singlePd;
+  let { quantity, name, img, Price, Model, desc, status , suplier } = singlePd;
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
@@ -27,7 +27,7 @@ const Inventory = () => {
     quantity = quantity - 1;
     let data = await axios.put(url, { quantity: quantity }).then((res) => {
       if (res.request.status === 200) {
-        toast("done");
+        toast(" Delevired One Product");
       }
     });
   };
@@ -42,7 +42,7 @@ const Inventory = () => {
     } else {
       let data = await axios.put(url, { quantity: quantity }).then((res) => {
         if (res.request.status === 200) {
-          toast("done");
+          toast("Product Updated");
         }
       });
     }
@@ -63,8 +63,9 @@ const Inventory = () => {
             <h5>Product Price : ${Price}</h5>
             <h5>Availavle Products :{quantity} </h5>
             <h6>Information: {desc}</h6>
+            <h6>Supplier: {suplier}</h6>
             {/* <h6>Status: {status}</h6> */}
-            <h5> Status: {quantity > 0 ? "in stock" : "sold Out"}</h5>
+            <h5> Status: {quantity > 0 ? status : "sold Out"}</h5>
             {parseInt(quantity) === 0 ? (
               <button
                 className="btn btn-danger my-2"

@@ -1,3 +1,4 @@
+import './MyItem.css'
 import axios from "axios";
 
 import React, { useEffect, useState } from "react";
@@ -10,26 +11,7 @@ import auth from "../../firebase.init";
 const MyItem = () => {
   const [user] = useAuthState(auth);
   const [userItem, setUserItem] = useState([]);
-  // const [items, setItems] = useState([]);
-  // ` https://tranquil-castle-58262.herokuapp.com/products?email=${user?.email}`
-  useEffect(() => {
-    // fetch(`https://tranquil-castle-58262.herokuapp.com/products`)
-    // const email = user.email;
-    // fetch(`https://tranquil-castle-58262.herokuapp.com/products?email=${email}`)
-    //   .then((res) => res.json())
-    //   .then((data) => setUserItem(data));
-    // const getItem = async () => {
-    //   const email = user.email;
-    //   const url = `https://tranquil-castle-58262.herokuapp.com/products?email=${email}`;
-    //   const { data } = await axios.get(url);
-    //   setItems(data);
-    // };
-    // getItem();
-    // console.log(items); user.email, items
-    // const [items , setItems]=useState([])
-  }, []);
-  // let item = userItem.filter((sitem) => sitem?.email === user?.email);
-  // console.log(item);
+  
   const navigate = useNavigate();
   const [items, setItems] = useState([]);
 
@@ -63,16 +45,16 @@ const MyItem = () => {
   };
 
   return (
-    <div>
+    <div style={{minHeight:'100vh'}} className='main-div'>
       <h2 className="text-center my-3">Item added by : {user?.displayName}</h2>
-      <div className="row ">
+      <div className="row " style={{maxWidth:'100vw'}}>
         <div className="col-12 col-lg-6 mx-auto">
           {items?.map((uItem) => (
             <div
-              className="row my-4 mx-2 py-2 rounded shadow"
+              className="row my-4  py-2  rounded shadow mx-auto justify-content-center py-3"
               style={{ border: "1px solid gray", cursor: "pointer" }}
             >
-              <div className="col-3">
+              <div className="col-6 col-lg-3">
                 <img
                   src={uItem?.img}
                   className="img-fluid text-center d-flex align-items-center"
@@ -80,12 +62,12 @@ const MyItem = () => {
                   alt=""
                 />
               </div>
-              <div className="col-5 text-center">
+              <div className="col-7 col-lg-5 text-center my-1">
                 <h5>Name : {uItem?.name}</h5>
                 <h5>Model : {uItem?.Model}</h5>
                 <h5>Price : ${uItem?.Price}</h5>
               </div>
-              <div className="col-4 text-center d-flex align-items-center">
+              <div className="col-8 col-lg-4 text-center d-flex align-items-center">
                 <button
                   className="btn btn-danger "
                   onClick={() => handleDelete(uItem?._id)}
