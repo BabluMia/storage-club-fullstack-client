@@ -10,8 +10,6 @@ import auth from "../../firebase.init";
 
 const MyItem = () => {
   const [user] = useAuthState(auth);
-  const [userItem, setUserItem] = useState([]);
-  
   const navigate = useNavigate();
   const [items, setItems] = useState([]);
 

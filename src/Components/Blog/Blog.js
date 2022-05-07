@@ -40,7 +40,7 @@ const Blog = () => {
             </Accordion.Item>
             <Accordion.Item eventKey="1">
               <Accordion.Header>
-                When should you use nodejs and when should you use mongodb
+                When should you use nodejs and when should you use mongodb?
               </Accordion.Header>
               <Accordion.Body>
                 <p>

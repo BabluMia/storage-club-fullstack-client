@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import AllInventory from "../AllInventory/AllInventory";
 
 const ManageInventory = () => {
@@ -26,6 +28,10 @@ const ManageInventory = () => {
             ))}
           </div>
         }
+        <Link style={{textDecoration:'none'}} to='/add-item' className="d-flex justify-content-center align-items-center ">
+        <Button className="btn btn-danger text-center "> Add Item </Button>
+        </Link>
+        
       </div>
     </div>
   );

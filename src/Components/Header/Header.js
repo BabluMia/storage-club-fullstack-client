@@ -31,9 +31,7 @@ const Header = () => {
               Home
             </Nav.Link>
 
-            <Nav.Link as={Link} to="/blog" >
-              Blog
-            </Nav.Link>
+            
             <Nav.Link as={Link} to="/manage-inventory" >
               Manage Inventory
             </Nav.Link>
@@ -42,6 +40,9 @@ const Header = () => {
             </Nav.Link>
             <Nav.Link as={Link} to="/my-item" >
               My Item
+            </Nav.Link>
+            <Nav.Link as={Link} to="/blog" >
+              Blog
             </Nav.Link>
             <Nav.Link as={Link} to="/contact" >
               Contact

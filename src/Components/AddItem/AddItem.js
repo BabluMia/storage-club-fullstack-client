@@ -10,7 +10,6 @@ const AddItem = () => {
 
   const handleAddItem = (event) => {
     const url1 = " https://tranquil-castle-58262.herokuapp.com/products";
-    const url2 = " https://tranquil-castle-58262.herokuapp.com/userItem";
     event.preventDefault();
     const addedByUser = {
       Userame: user.displayName,
@@ -35,18 +34,7 @@ const AddItem = () => {
         }
       });
     event.target.reset();
-    // fetch(url2 , {
-    //   method: "POST",
-    //   headers: { "content-type": "application/json" },
-    //   body: JSON.stringify(addedByUser),
-    // })
-    //   .then((res) => res.json())
-    //   .then((result) => {
-    //     if (result.insertedId) {
-    //       console.log("Item added");
-    //     }
-    //   });
-    // event.target.reset();
+   
   };
 
   return (
