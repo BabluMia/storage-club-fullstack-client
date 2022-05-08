@@ -14,8 +14,8 @@ const Contact = () => {
       <div className="min-h my-5">
       
         <span className="text-white my-5">.</span>
-        <h2 className="text-4xl text-center mt-5 pt-4 fw-bold  p-4">
-          Contact To Storage Club .
+        <h2 className="text-3xl text-center mt-5 pt-4 fw-bold  p-4">
+          Contact To CEO of Storage Club .
         </h2>
         <div className="w-50 mx-auto">
           <div className="mb-3">
@@ -23,7 +23,7 @@ const Contact = () => {
               htmlFor="exampleFormControlInput1"
               className="form-label mt-3"
             >
-              User Name
+              Admin Name
             </label>
             <input
               type="Text"
@@ -34,7 +34,7 @@ const Contact = () => {
               htmlFor="exampleFormControlInput1"
               className="form-label mt-3"
             >
-              User Email
+              Admin Email
             </label>
             <input
               type="email"
@@ -44,7 +44,7 @@ const Contact = () => {
           </div>
           <div className="mb-3 mt-3">
             <label htmlFor="exampleFormControlTextarea1" className="form-label">
-              User Response
+              What Storage Club Need To Change ...
             </label>
             <textarea
               className="form-control"
@@ -57,7 +57,7 @@ const Contact = () => {
             className=" rounded-0 border border-dark my-4 btn btn-transparent text-dark px-4 py-2 me-4 custom-btn fw-bold"
             onClick={submit}
           >
-            Send Us
+            Send
           </button>
          
         </div>

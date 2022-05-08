@@ -45,12 +45,12 @@ const MyItem = () => {
   return (
     <div style={{minHeight:'100vh'}} className='main-div'>
       <h2 className="text-center my-3">Item added by : {user?.displayName}</h2>
-      <div className="row " style={{maxWidth:'100vw'}}>
-        <div className="col-12 col-lg-6 mx-auto">
+      <div className="row mx-auto ps-3" style={{maxWidth:'100vw'}}>
+        <div className="col-11 col-lg-6 mx-auto">
           {items?.map((uItem) => (
             <div
               className="row my-4  py-2  rounded shadow mx-auto justify-content-center py-3"
-              style={{ border: "1px solid gray", cursor: "pointer" }}
+              style={{ border: "1px solid gray", cursor: "pointer"}}
             >
               <div className="col-6 col-lg-3">
                 <img
