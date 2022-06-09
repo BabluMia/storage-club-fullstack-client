@@ -19,17 +19,17 @@
 
 ### `Project Detail`
 
-* This website build for a Ware house management company called Storage Club
+* This website build for a Warehouse management company called Storage Club
 * You can see lots of products in warehouse .
-* It is a electronics ware house .
+* It is a electronics warehouse .
 * In home page you can see header , banner , 6 item , 2 extra section and a footer .
 * If you click in update button this page will navigate in product detail page .
-* in product detail page you can see all about product .
+* In product detail page you can see all about product .
 * In detail page you can update product stock and deliver product .
-* There also add item pase if there is an user he/she can add/update/delete product 
+* There also add item pase if there is an user he/she can add/update/delete product.
 * In all product page you can see all product 
 * You can login with google and email .
-* User can't see hes/her item without jwt token.
+* User can't see his/her item without jwt token.
 
 ### `Used Technology`
 
